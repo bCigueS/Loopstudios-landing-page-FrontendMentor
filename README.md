@@ -14,8 +14,6 @@ This is a solution to the [Loopstudios landing page challenge on Frontend Mentor
 		- [Built with](#built-with)
 	- [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -31,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Here](https://bcigues.github.io/Loopstudios-landing-page-FrontendMentor/)
 
 ## My process
 
