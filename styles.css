@@ -1,0 +1,342 @@
+/* GENERAL AND RESET */
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+:root {
+	--white: #ffffff; 
+	--black: #000;
+	--dark-grey: #808080;
+	--dark-grey: #696969;
+	--font1: 'Alata', sans-serif;
+	--font2: 'Josefin Sans', sans-serif;
+	--font-size: 15px;
+	--min-width: 650px
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	/* outline: 1px solid red; */
+}
+
+html, body {
+	height: 100%;
+	font-family: var(--font1);
+}
+
+body {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+
+/* HEADER STYLING */
+header {
+	padding: 64px 165px;
+	width: 100%;
+	height: 650px;
+	background-image: url('./assets/desktop/image-hero.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.header-wrapper {
+	display: flex;
+	flex-direction: column;
+	min-width: var(--min-width);
+}
+
+.header-wrapper h1 {
+	width: 650px;
+	height: 278px;
+	padding: 40px;
+
+	border: 2px solid var(--white);
+	font-family: var(--font2);
+	font-size: 72px;
+	line-height: 70px;
+	text-transform: uppercase;
+	color: var(--white);
+}
+
+.navigation-wrapper {
+	margin-bottom: 130px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.navigation-nav__list {
+	width: 100%;
+	min-width: 300px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 15px;
+}
+
+.navigation-nav__item {
+	color: var(--white);
+	list-style-type: none;
+	position: relative;
+}
+
+.navigation-nav__item::after {
+	position: absolute;
+	content: '';
+	left: 50%;
+	transform: translateX(-50%);
+	margin: auto;
+	bottom: -8px;
+	width: 0;
+	border-bottom: 2px solid var(--white);
+
+	transition: width 0.3s ease-in-out;
+}
+
+.navigation-nav__item:hover {
+	cursor: pointer;
+}
+
+.navigation-nav__item:hover::after {
+	width: 50%;
+}
+
+/* MAIN */
+main {
+	padding: 64px 165px;
+}
+
+/* PRESENTATION */
+.presentation {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	height: 500px;
+	margin-bottom: 180px;
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+	grid-column: 1 / 4;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+
+.image img {
+	min-height: 100%;
+}
+
+.presentation__text {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	/* background-color: cadetblue; */
+	grid-column: 3 / -1;
+	align-self: flex-end;
+	padding: 90px 0 0 90px;
+	background-color: var(--white);
+}
+
+.presentation__text h1 {
+	font-family: var(--font2);
+	font-size: 48px;
+	line-height: 48px;
+	text-transform: uppercase;
+	margin-bottom: 25px;
+}
+
+.presentation__text p {
+	font-size: 15px;
+	line-height: 25px;
+	opacity: 50%;
+}
+
+.image, .presentation__text {
+	grid-row: 1 / 2;
+}
+/* ARTICLE CREATION */
+.creation {
+	font-family: var(--font2);
+	text-transform: uppercase;
+	min-width: var(--min-width);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.creation__title {
+	margin-bottom: 80px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.creation__title h1 {
+	font-size: 48px;
+}
+
+.creation__title button {
+	background: none;
+	border: 2px solid var(--black);
+	color: var(--black);
+	height: 40px;
+	width: 157px;
+	font-family: var(--font1);
+	font-size: 14px;
+	line-height: 14px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	cursor: pointer;
+	position: relative;
+	transition: all 0.3s ease-in;
+}
+
+.creation__title button::after {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	align-content: center;
+	transform: translateX(-50%);
+	width: 0%;
+	height: 100%;
+	content: '';
+	z-index: -1;
+	background-color: var(--black);
+	transition: width 0.3s ease-in;
+}
+
+.creation__title button:hover {
+	color: var(--white);
+}
+
+.creation__title button:hover::after {
+	width: 100%;
+
+}
+
+.creation__items {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(224px, 256px));
+	gap: 30px;
+	justify-content: space-around;
+	/* grid-template-rows: 1fr 1fr; */
+}
+
+.creation__item h1 {
+	font-size: 32px;
+	position: relative;
+	z-index: 1;
+	line-height: 32px;
+
+}
+
+.creation__item {
+	color: var(--white);
+	/* max-width: 224px; */
+	display: flex;
+	flex-direction: column-reverse;
+	padding: 40px 32px;
+	height: 450px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	transition: all 0.1s ease-in;
+	position: relative;
+}
+
+.creation__item::after {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0);
+	transition: background-color 0.1s ease-in-out;
+
+}
+
+.creation__item:hover {
+	color: var(--black);
+}
+
+.creation__item:hover::after {
+	background-color: rgba(255, 255, 255, 0.75);
+}
+/* CREATION ITEM */
+
+#deep-earth.creation__item {
+	background-image: url('./assets/desktop/image-deep-earth.jpg');
+
+}
+
+#night-arcade.creation__item {
+	background-image: url('./assets/desktop/image-night-arcade.jpg');
+}
+
+#soccer-team-vr.creation__item {
+	background-image: url('./assets/desktop/image-soccer-team.jpg');
+}
+
+#the-grid.creation__item {
+	background-image: url('./assets/desktop/image-grid.jpg');
+}
+
+#from-up-above-vr.creation__item {
+	background-image: url('./assets/desktop/image-from-above.jpg');
+}
+
+#pocket-borealis.creation__item {
+	background-image: url('./assets/desktop/image-pocket-borealis.jpg');
+}
+
+#the-curiosity.creation__item {
+	background-image: url('./assets/desktop/image-curiosity.jpg');
+}
+
+#make-it-fisheye.creation__item {
+	background-image: url('./assets/desktop/image-fisheye.jpg');
+}
+
+/* FOOTER */
+footer {
+	background-color: var(--black);
+	padding: 64px 165px;
+}
+.footer-wrapper {
+
+	color: var(--white);
+	min-width: var(--min-width);
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 24px 24px;
+	grid-auto-flow: column;
+	gap: 24px;
+}
+
+.footer-logos {
+	display: flex;
+	justify-self: flex-end;
+}
+
+.footer-logos > * {
+	margin-left: 16px;
+}
+
+.footer-copyright {
+	display: flex;
+	justify-self: flex-end;
+	font-size: 15px;
+	opacity: 50%;
+}
+
+@media screen and (max-width: 1024px ) {
+	.
+}
+
+
